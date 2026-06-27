@@ -1,0 +1,1313 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bopeng Game Store - Top Up Game Murah & Cepat</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            darker: '#070A10',
+                            card: '#151D30',
+                            accent: '#8B5CF6', /* Violet */
+                            secondary: '#06B6D4', /* Cyan */
+                            textMuted: '#94A3B8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0B0F19;
+            color: #F8FAFC;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070A10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1F2937;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8B5CF6;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-accent selection:text-white overflow-x-hidden">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-brand-dark/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-accent to-brand-secondary flex items-center justify-center shadow-lg shadow-brand-accent/25 group-hover:scale-105 transition-transform">
+                    <i data-lucide="gamepad-2" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-white via-slate-200 to-brand-accent bg-clip-text text-transparent">BOPENG</span>
+                    <span class="text-xs block text-brand-secondary font-bold tracking-widest -mt-1">GAME STORE</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#hero" class="text-sm font-semibold text-white hover:text-brand-accent transition-colors">Home</a>
+                <a href="#topup-section" class="text-sm font-semibold text-brand-textMuted hover:text-brand-accent transition-colors">Top Up</a>
+                <a href="#testimoni" class="text-sm font-semibold text-brand-textMuted hover:text-brand-accent transition-colors">Testimoni</a>
+                <a href="#faq" class="text-sm font-semibold text-brand-textMuted hover:text-brand-accent transition-colors">Bantuan</a>
+            </nav>
+
+            <!-- CTA/Contact Button -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/628123456789" target="_blank" class="hidden sm:flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-accent px-4 py-2 rounded-xl text-sm font-semibold transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-brand-accent"></i>
+                    <span>Hubungi CS</span>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-white hover:text-brand-accent focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Nav -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-white/5 px-4 py-4 space-y-3">
+            <a href="#hero" class="block text-sm font-semibold text-white hover:text-brand-accent py-2">Home</a>
+            <a href="#topup-section" class="block text-sm font-semibold text-brand-textMuted hover:text-brand-accent py-2">Top Up</a>
+            <a href="#testimoni" class="block text-sm font-semibold text-brand-textMuted hover:text-brand-accent py-2">Testimoni</a>
+            <a href="#faq" class="block text-sm font-semibold text-brand-textMuted hover:text-brand-accent py-2">Bantuan</a>
+            <a href="https://wa.me/628123456789" target="_blank" class="flex items-center justify-center gap-2 bg-brand-accent/20 border border-brand-accent/30 py-2.5 rounded-xl text-sm font-semibold text-brand-accent w-full">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span>Hubungi CS via WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="hero" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+            <!-- Background effects -->
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl -z-10"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 bg-brand-accent/10 border border-brand-accent/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-brand-accent">
+                            <span class="flex h-2 w-2 relative">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
+                            </span>
+                            Proses Kilat Otomatis 24 Jam Non-Stop
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            Top Up Diamonds & UC <br class="hidden sm:block">
+                            <span class="bg-gradient-to-r from-brand-accent via-fuchsia-400 to-brand-secondary bg-clip-text text-transparent">Paling Murah & Aman!</span>
+                        </h1>
+                        <p class="text-brand-textMuted text-base sm:text-lg max-w-2xl mx-auto lg:mx-0">
+                            Nikmati layanan isi ulang Diamond Mobile Legends dan UC PUBG Mobile terpercaya di <span class="text-white font-semibold">Bopeng Game Store</span>. Pembayaran lengkap, instan, amanah, dan terintegrasi otomatis.
+                        </p>
+
+                        <!-- Highlights -->
+                        <div class="grid grid-cols-3 gap-4 pt-4 max-w-md mx-auto lg:mx-0">
+                            <div class="bg-brand-card/50 border border-white/5 p-3 rounded-2xl text-center">
+                                <div class="text-brand-accent font-extrabold text-lg sm:text-xl">3 Detik</div>
+                                <div class="text-xs text-brand-textMuted">Rata-rata kirim</div>
+                            </div>
+                            <div class="bg-brand-card/50 border border-white/5 p-3 rounded-2xl text-center">
+                                <div class="text-brand-secondary font-extrabold text-lg sm:text-xl">100%</div>
+                                <div class="text-xs text-brand-textMuted">Garansi Aman</div>
+                            </div>
+                            <div class="bg-brand-card/50 border border-white/5 p-3 rounded-2xl text-center">
+                                <div class="text-brand-accent font-extrabold text-lg sm:text-xl">24/7</div>
+                                <div class="text-xs text-brand-textMuted">Customer Support</div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                            <a href="#topup-section" class="bg-brand-accent hover:bg-brand-accent/90 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-accent/20 hover:shadow-brand-accent/30 transition-all text-center">
+                                Mulai Top Up Sekarang
+                            </a>
+                            <a href="#testimoni" class="bg-white/5 hover:bg-white/10 border border-white/10 px-8 py-4 rounded-xl font-semibold transition-all text-center">
+                                Lihat Testimoni
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Promo Banner -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-sm lg:max-w-none">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-brand-accent to-brand-secondary rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
+                            
+                            <!-- Hero Cards Showcase -->
+                            <div class="relative bg-brand-card border border-white/10 rounded-3xl p-6 shadow-2xl">
+                                <div class="flex items-center justify-between pb-4 border-b border-white/5">
+                                    <h3 class="font-bold text-lg text-white">Promo Minggu Ini</h3>
+                                    <span class="bg-brand-secondary/25 text-brand-secondary text-xs px-2.5 py-1 rounded-full font-bold">DISCOUNT UP TO 30%</span>
+                                </div>
+                                
+                                <div class="mt-4 space-y-3">
+                                    <!-- ML Promo -->
+                                    <div class="flex items-center gap-4 bg-white/5 p-3 rounded-2xl border border-white/5 hover:border-brand-accent/30 transition-all">
+                                        <div class="w-12 h-12 bg-indigo-900 rounded-xl flex items-center justify-center font-bold text-xs text-white">MLBB</div>
+                                        <div class="flex-grow">
+                                            <h4 class="font-bold text-sm">86 Diamonds (78 + 8 Bonus)</h4>
+                                            <p class="text-xs text-brand-textMuted">Harga Spesial Hari Ini</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="text-brand-secondary font-bold text-sm">Rp 19.900</div>
+                                            <div class="text-[10px] text-brand-textMuted line-through">Rp 26.000</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- PUBG Promo -->
+                                    <div class="flex items-center gap-4 bg-white/5 p-3 rounded-2xl border border-white/5 hover:border-brand-accent/30 transition-all">
+                                        <div class="w-12 h-12 bg-amber-900 rounded-xl flex items-center justify-center font-bold text-xs text-white">PUBG</div>
+                                        <div class="flex-grow">
+                                            <h4 class="font-bold text-sm">325 UC (300 + 25 Bonus)</h4>
+                                            <p class="text-xs text-brand-textMuted">Harga Kilat</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="text-brand-secondary font-bold text-sm">Rp 62.500</div>
+                                            <div class="text-[10px] text-brand-textMuted line-through">Rp 80.000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Topup Area -->
+        <section id="topup-section" class="py-16 bg-brand-darker relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-extrabold tracking-tight">Pilih Game Favorit Anda</h2>
+                    <p class="text-brand-textMuted mt-2">Isi form di bawah ini dengan memasukkan ID Game, nominal, dan selesaikan pembayaran secara instan.</p>
+                </div>
+
+                <!-- Game Selector Buttons -->
+                <div class="flex justify-center gap-4 md:gap-6 mb-12">
+                    <!-- MLBB Button -->
+                    <button id="btn-select-ml" onclick="selectGame('ml')" class="relative flex items-center gap-4 px-6 py-4 md:px-8 md:py-5 rounded-2xl border-2 transition-all overflow-hidden duration-300 w-full max-w-xs justify-center group bg-brand-card border-brand-accent shadow-lg shadow-brand-accent/10">
+                        <div class="absolute -top-10 -right-10 w-24 h-24 bg-brand-accent/20 rounded-full blur-xl group-hover:bg-brand-accent/30 transition-colors"></div>
+                        <i data-lucide="swords" class="w-6 h-6 md:w-8 md:h-8 text-brand-accent"></i>
+                        <div class="text-left">
+                            <span class="block text-xs text-brand-textMuted uppercase font-bold tracking-widest">Mobile Legends</span>
+                            <span class="font-extrabold text-base md:text-lg text-white">MLBB Diamonds</span>
+                        </div>
+                    </button>
+
+                    <!-- PUBG Button -->
+                    <button id="btn-select-pubg" onclick="selectGame('pubg')" class="relative flex items-center gap-4 px-6 py-4 md:px-8 md:py-5 rounded-2xl border-2 transition-all overflow-hidden duration-300 w-full max-w-xs justify-center group bg-brand-card border-white/5 hover:border-brand-secondary/50">
+                        <div class="absolute -top-10 -right-10 w-24 h-24 bg-brand-secondary/5 rounded-full blur-xl group-hover:bg-brand-secondary/20 transition-colors"></div>
+                        <i data-lucide="crosshair" class="w-6 h-6 md:w-8 md:h-8 text-brand-secondary"></i>
+                        <div class="text-left">
+                            <span class="block text-xs text-brand-textMuted uppercase font-bold tracking-widest">PUBG Mobile</span>
+                            <span class="font-extrabold text-base md:text-lg text-white">Unknown Cash</span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Main Form Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Left Columns: Game Input details (Form) -->
+                    <div class="lg:col-span-8 space-y-8">
+                        
+                        <!-- STEP 1: Akun Info -->
+                        <div class="bg-brand-card border border-white/10 rounded-3xl p-6 md:p-8 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-2 h-full bg-brand-accent" id="step-1-indicator"></div>
+                            
+                            <div class="flex items-center gap-3 mb-6">
+                                <span class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white font-extrabold text-sm">1</span>
+                                <h3 class="text-lg md:text-xl font-bold">Lengkapi Data Akun Game</h3>
+                            </div>
+
+                            <!-- Mobile Legends Form Fields -->
+                            <div id="ml-fields" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-textMuted uppercase tracking-wider mb-2">User ID (Tanpa Spasi)</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                            <i data-lucide="user" class="h-5 w-5 text-brand-textMuted"></i>
+                                        </div>
+                                        <input type="number" id="ml-userid" placeholder="Contoh: 12345678" class="block w-full pl-11 pr-4 py-3.5 bg-brand-dark/60 border border-white/10 focus:border-brand-accent rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-accent transition-all text-sm md:text-base">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-textMuted uppercase tracking-wider mb-2">Zone ID</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                            <i data-lucide="globe" class="h-5 w-5 text-brand-textMuted"></i>
+                                        </div>
+                                        <input type="number" id="ml-zoneid" placeholder="Contoh: 1234" class="block w-full pl-11 pr-4 py-3.5 bg-brand-dark/60 border border-white/10 focus:border-brand-accent rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-accent transition-all text-sm md:text-base">
+                                    </div>
+                                </div>
+                                <div class="md:col-span-2 text-[11px] text-brand-textMuted flex items-start gap-2 bg-white/5 p-3 rounded-lg border border-white/5">
+                                    <i data-lucide="info" class="w-4 h-4 text-brand-accent flex-shrink-0 mt-0.5"></i>
+                                    <span>Untuk mengetahui User ID Anda, silakan klik menu profil di bagian kiri atas menu utama game. User ID adalah angka yang tertera di sana (contoh: ID 12345678 (1234) ). Masukkan ID di kolom kiri, dan Zone ID (dalam kurung) di kolom kanan.</span>
+                                </div>
+                            </div>
+
+                            <!-- PUBG Mobile Form Fields -->
+                            <div id="pubg-fields" class="hidden grid grid-cols-1 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-textMuted uppercase tracking-wider mb-2">Karakter ID (UID)</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                            <i data-lucide="user" class="h-5 w-5 text-brand-textMuted"></i>
+                                        </div>
+                                        <input type="number" id="pubg-userid" placeholder="Contoh: 5123456789" class="block w-full pl-11 pr-4 py-3.5 bg-brand-dark/60 border border-white/10 focus:border-brand-secondary rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-secondary transition-all text-sm md:text-base">
+                                    </div>
+                                </div>
+                                <div class="text-[11px] text-brand-textMuted flex items-start gap-2 bg-white/5 p-3 rounded-lg border border-white/5">
+                                    <i data-lucide="info" class="w-4 h-4 text-brand-secondary flex-shrink-0 mt-0.5"></i>
+                                    <span>Untuk menemukan Karakter ID Anda di PUBG Mobile, buka profil dalam game Anda di pojok kiri atas layar. ID Karakter Anda berupa nomor unik panjang yang tercantum di profil Anda. Pastikan memasukkan seluruh angka tanpa karakter lainnya.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 2: Pilih Nominal -->
+                        <div class="bg-brand-card border border-white/10 rounded-3xl p-6 md:p-8 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-2 h-full bg-brand-accent" id="step-2-indicator"></div>
+
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="flex items-center gap-3">
+                                    <span class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white font-extrabold text-sm" id="step-2-icon">2</span>
+                                    <h3 class="text-lg md:text-xl font-bold">Pilih Nominal Top Up</h3>
+                                </div>
+                                <span class="text-xs text-brand-textMuted bg-white/5 px-2.5 py-1 rounded-full font-semibold">Stok Ready</span>
+                            </div>
+
+                            <!-- Nominals Container for MLBB -->
+                            <div id="ml-nominals" class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                <!-- Cards populated by JS to easily handle selection state -->
+                            </div>
+
+                            <!-- Nominals Container for PUBG -->
+                            <div id="pubg-nominals" class="hidden grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                <!-- Cards populated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- STEP 3: Pilih Pembayaran -->
+                        <div class="bg-brand-card border border-white/10 rounded-3xl p-6 md:p-8 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-2 h-full bg-brand-accent" id="step-3-indicator"></div>
+
+                            <div class="flex items-center gap-3 mb-6">
+                                <span class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white font-extrabold text-sm" id="step-3-icon">3</span>
+                                <h3 class="text-lg md:text-xl font-bold">Pilih Metode Pembayaran</h3>
+                            </div>
+
+                            <div class="space-y-6">
+                                <!-- E-Wallet & QRIS -->
+                                <div>
+                                    <span class="block text-xs font-bold text-brand-textMuted uppercase tracking-wider mb-3">E-Wallet & QRIS (Instan Otomatis)</span>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <!-- QRIS / E-Wallet -->
+                                        <div class="payment-card border border-white/5 hover:border-brand-accent/50 bg-brand-dark/50 p-4 rounded-2xl flex items-center justify-between cursor-pointer transition-all relative overflow-hidden" onclick="selectPayment('qris', 'QRIS Seluruh Indonesia', 'https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_QRIS.svg')">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-12 h-10 bg-white rounded-lg p-1.5 flex items-center justify-center">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_QRIS.svg" alt="QRIS" class="max-h-full max-w-full">
+                                                </div>
+                                                <div>
+                                                    <span class="block font-bold text-sm text-white">QRIS All Payment</span>
+                                                    <span class="text-[10px] text-brand-textMuted">Dana, OVO, LinkAja, Shopee</span>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <span class="payment-price text-xs font-bold text-brand-secondary">-</span>
+                                                <span class="text-[9px] block text-emerald-400">Verifikasi Instan</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- DANA -->
+                                        <div class="payment-card border border-white/5 hover:border-brand-accent/50 bg-brand-dark/50 p-4 rounded-2xl flex items-center justify-between cursor-pointer transition-all relative overflow-hidden" onclick="selectPayment('dana', 'DANA', 'https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg')">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-12 h-10 bg-white rounded-lg p-1.5 flex items-center justify-center">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA" class="max-h-full max-w-full">
+                                                </div>
+                                                <div>
+                                                    <span class="block font-bold text-sm text-white">DANA Wallet</span>
+                                                    <span class="text-[10px] text-brand-textMuted">Metode Transfer/Direct</span>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <span class="payment-price text-xs font-bold text-brand-secondary">-</span>
+                                                <span class="text-[9px] block text-emerald-400">Verifikasi Instan</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- GOPAY -->
+                                        <div class="payment-card border border-white/5 hover:border-brand-accent/50 bg-brand-dark/50 p-4 rounded-2xl flex items-center justify-between cursor-pointer transition-all relative overflow-hidden" onclick="selectPayment('gopay', 'GoPay', 'https://upload.wikimedia.org/wikipedia/commons/8/86/Gojek_logo_2019.svg')">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-12 h-10 bg-white rounded-lg p-1.5 flex items-center justify-center">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gojek_logo_2019.svg" alt="GOPAY" class="max-h-full max-w-full">
+                                                </div>
+                                                <div>
+                                                    <span class="block font-bold text-sm text-white">GoPay</span>
+                                                    <span class="text-[10px] text-brand-textMuted">Instan QR / Deeplink</span>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <span class="payment-price text-xs font-bold text-brand-secondary">-</span>
+                                                <span class="text-[9px] block text-emerald-400">Verifikasi Instan</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- SHOPEEPAY -->
+                                        <div class="payment-card border border-white/5 hover:border-brand-accent/50 bg-brand-dark/50 p-4 rounded-2xl flex items-center justify-between cursor-pointer transition-all relative overflow-hidden" onclick="selectPayment('shopeepay', 'ShopeePay', 'https://upload.wikimedia.org/wikipedia/commons/f/fe/ShopeePay_logo.svg')">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-12 h-10 bg-white rounded-lg p-1.5 flex items-center justify-center">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/ShopeePay_logo.svg" alt="ShopeePay" class="max-h-full max-w-full">
+                                                </div>
+                                                <div>
+                                                    <span class="block font-bold text-sm text-white">ShopeePay</span>
+                                                    <span class="text-[10px] text-brand-textMuted">Aplikasi Shopee terintegrasi</span>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <span class="payment-price text-xs font-bold text-brand-secondary">-</span>
+                                                <span class="text-[9px] block text-emerald-400">Verifikasi Instan</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bank Transfers -->
+                                <div>
+                                    <span class="block text-xs font-bold text-brand-textMuted uppercase tracking-wider mb-3">Bank Transfer (Manual / Otomatis)</span>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <!-- BCA -->
+                                        <div class="payment-card border border-white/5 hover:border-brand-accent/50 bg-brand-dark/50 p-4 rounded-2xl flex items-center justify-between cursor-pointer transition-all relative overflow-hidden" onclick="selectPayment('bca', 'Bank BCA', 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg')">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-12 h-10 bg-white rounded-lg p-1 flex items-center justify-center">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA" class="max-h-full max-w-full">
+                                                </div>
+                                                <div>
+                                                    <span class="block font-bold text-sm text-white">BCA Transfer</span>
+                                                    <span class="text-[10px] text-brand-textMuted">Proses manual cepat 1-5 menit</span>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <span class="payment-price text-xs font-bold text-brand-secondary">-</span>
+                                                <span class="text-[9px] block text-amber-400">Proses Cepat</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mandiri -->
+                                        <div class="payment-card border border-white/5 hover:border-brand-accent/50 bg-brand-dark/50 p-4 rounded-2xl flex items-center justify-between cursor-pointer transition-all relative overflow-hidden" onclick="selectPayment('mandiri', 'Bank Mandiri', 'https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg')">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-12 h-10 bg-white rounded-lg p-1 flex items-center justify-center">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg" alt="Mandiri" class="max-h-full max-w-full overflow-hidden">
+                                                </div>
+                                                <div>
+                                                    <span class="block font-bold text-sm text-white">Mandiri Transfer</span>
+                                                    <span class="text-[10px] text-brand-textMuted">Proses manual cepat 1-5 menit</span>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <span class="payment-price text-xs font-bold text-brand-secondary">-</span>
+                                                <span class="text-[9px] block text-amber-400">Proses Cepat</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 4: WhatsApp/Kontak Info -->
+                        <div class="bg-brand-card border border-white/10 rounded-3xl p-6 md:p-8 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-2 h-full bg-brand-accent" id="step-4-indicator"></div>
+
+                            <div class="flex items-center gap-3 mb-6">
+                                <span class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white font-extrabold text-sm" id="step-4-icon">4</span>
+                                <h3 class="text-lg md:text-xl font-bold">No. WhatsApp & Konfirmasi</h3>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-textMuted uppercase tracking-wider mb-2">No. WhatsApp Aktif</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                            <i data-lucide="message-square" class="h-5 w-5 text-brand-textMuted"></i>
+                                        </div>
+                                        <input type="tel" id="user-phone" placeholder="Contoh: 081234567890" class="block w-full pl-11 pr-4 py-3.5 bg-brand-dark/60 border border-white/10 focus:border-brand-accent rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-accent transition-all text-sm md:text-base">
+                                    </div>
+                                    <p class="text-[11px] text-brand-textMuted mt-1.5">Bukti pembayaran dan status transaksi otomatis dikirimkan ke nomor WhatsApp ini.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Live Summary / Checkout Button sticky widget -->
+                    <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
+                        <div class="bg-brand-card border border-white/10 rounded-3xl p-6 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 rounded-full blur-2xl -z-10"></div>
+                            
+                            <h3 class="font-bold text-lg mb-4 pb-3 border-b border-white/5 text-white flex items-center justify-between">
+                                <span>Ringkasan Pesanan</span>
+                                <i data-lucide="receipt" class="w-5 h-5 text-brand-accent"></i>
+                            </h3>
+
+                            <div class="space-y-4 text-sm">
+                                <!-- Game Summary -->
+                                <div class="flex justify-between items-center py-1">
+                                    <span class="text-brand-textMuted">Game</span>
+                                    <span class="font-bold text-white uppercase tracking-wider" id="summary-game">Mobile Legends</span>
+                                </div>
+                                <!-- Game ID -->
+                                <div class="flex justify-between items-center py-1">
+                                    <span class="text-brand-textMuted">Game ID</span>
+                                    <span class="font-bold text-white" id="summary-id">-</span>
+                                </div>
+                                <!-- Nominal Summary -->
+                                <div class="flex justify-between items-start py-1">
+                                    <span class="text-brand-textMuted">Item</span>
+                                    <span class="font-bold text-right text-brand-accent" id="summary-item">-</span>
+                                </div>
+                                <!-- Payment Summary -->
+                                <div class="flex justify-between items-center py-1">
+                                    <span class="text-brand-textMuted">Pembayaran</span>
+                                    <span class="font-bold text-white text-right" id="summary-payment">-</span>
+                                </div>
+
+                                <div class="border-t border-white/5 pt-4 mt-2">
+                                    <div class="flex justify-between items-baseline mb-1">
+                                        <span class="text-base font-bold text-white">Subtotal</span>
+                                        <span class="text-2xl font-extrabold text-brand-secondary" id="summary-total">Rp 0</span>
+                                    </div>
+                                    <p class="text-[10px] text-brand-textMuted text-right">Sudah termasuk PPN & Biaya admin</p>
+                                </div>
+                            </div>
+
+                            <!-- CTA Checkout -->
+                            <button id="btn-checkout" onclick="handleCheckout()" class="w-full mt-6 bg-gradient-to-r from-brand-accent to-brand-secondary hover:from-brand-accent/90 hover:to-brand-secondary/90 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-brand-accent/15 hover:shadow-brand-accent/25 transition-all text-base focus:outline-none">
+                                <i data-lucide="zap" class="w-5 h-5"></i>
+                                <span>Bayar Sekarang</span>
+                            </button>
+
+                            <div class="mt-4 flex justify-center items-center gap-2 text-[11px] text-brand-textMuted">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                                Secures 256-bit SSL Encrypted Transaction
+                            </div>
+                        </div>
+
+                        <!-- Mini Promo Widget -->
+                        <div class="bg-gradient-to-tr from-[#1B113A] to-[#0E162B] border border-brand-accent/20 rounded-3xl p-6">
+                            <h4 class="font-bold text-sm text-white flex items-center gap-2 mb-2">
+                                <i data-lucide="gift" class="w-4 h-4 text-brand-accent"></i>
+                                Loyalty Points Bopeng
+                            </h4>
+                            <p class="text-xs text-brand-textMuted leading-relaxed">Setiap transaksi di Bopeng Game Store menghasilkan Koin Loyalty yang bisa ditukarkan dengan potongan langsung di pembelian berikutnya!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section id="testimoni" class="py-16 bg-brand-dark border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Header -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-extrabold tracking-tight text-white">Ulasan Pembeli Setia</h2>
+                    <p class="text-brand-textMuted mt-2">Lebih dari 10,000+ gamers memberikan ulasan positif tentang kecepatan proses Bopeng Game Store.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-brand-card/50 border border-white/5 p-6 rounded-3xl space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-brand-textMuted leading-relaxed">"Sumpah cepat banget! Baru bayar pakai DANA semenit kemudian langsung masuk notif Diamond MLBB nya di game. Recomended Bopeng Game Store!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center font-bold text-brand-accent text-sm">RI</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Reza Irfan</h4>
+                                <span class="text-[10px] text-brand-textMuted">Pembeli MLBB Diamonds</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-brand-card/50 border border-white/5 p-6 rounded-3xl space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-brand-textMuted leading-relaxed">"Harga UC PUBG nya paling murah dibanding store lain. Proses verifikasi QRIS otomatis, gak pakai repot upload bukti struk langsung terproses!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-secondary/20 flex items-center justify-center font-bold text-brand-secondary text-sm">DS</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Doni Setiawan</h4>
+                                <span class="text-[10px] text-brand-textMuted">Pembeli PUBG Mobile UC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-brand-card/50 border border-white/5 p-6 rounded-3xl space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-brand-textMuted leading-relaxed">"Cs nya ramah bgt waktu gw salah nulis zone id dikit langsung dibantu lewat chat WhatsApp fast respon bgt. Pokoknya mantap storenya."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center font-bold text-brand-accent text-sm">AM</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Andi Maulana</h4>
+                                <span class="text-[10px] text-brand-textMuted">Pembeli MLBB Diamonds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 bg-brand-darker border-t border-white/5">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Header -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold tracking-tight">Paling Sering Ditanyakan</h2>
+                    <p class="text-brand-textMuted mt-2">Masih ragu? Berikut beberapa informasi untuk membantu Anda.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-brand-card border border-white/5 rounded-2xl p-6">
+                        <h3 class="font-bold text-base text-white flex justify-between items-center cursor-pointer" onclick="toggleFaq(1)">
+                            <span>Apakah top up di Bopeng Game Store aman & legal?</span>
+                            <i data-lucide="chevron-down" id="faq-icon-1" class="w-5 h-5 text-brand-textMuted transform transition-transform"></i>
+                        </h3>
+                        <p id="faq-ans-1" class="hidden mt-3 text-sm text-brand-textMuted leading-relaxed">
+                            Ya, 100% aman dan legal. Semua Diamond Mobile Legends dan UC PUBG Mobile yang kami tawarkan bersumber dari distributor resmi langsung (Moonton & Tencent) menggunakan API resmi terintegrasi. Akun Anda sepenuhnya aman dari ancaman ban.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-brand-card border border-white/5 rounded-2xl p-6">
+                        <h3 class="font-bold text-base text-white flex justify-between items-center cursor-pointer" onclick="toggleFaq(2)">
+                            <span>Berapa lama proses masuknya setelah pembayaran?</span>
+                            <i data-lucide="chevron-down" id="faq-icon-2" class="w-5 h-5 text-brand-textMuted transform transition-transform"></i>
+                        </h3>
+                        <p id="faq-ans-2" class="hidden mt-3 text-sm text-brand-textMuted leading-relaxed">
+                            Proses top up berjalan secara otomatis menggunakan sistem API. Rata-rata transaksi diproses dalam waktu 3 hingga 10 detik setelah sistem kami mengonfirmasi pembayaran Anda berhasil.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-brand-card border border-white/5 rounded-2xl p-6">
+                        <h3 class="font-bold text-base text-white flex justify-between items-center cursor-pointer" onclick="toggleFaq(3)">
+                            <span>Bagaimana jika salah memasukkan ID akun Game?</span>
+                            <i data-lucide="chevron-down" id="faq-icon-3" class="w-5 h-5 text-brand-textMuted transform transition-transform"></i>
+                        </h3>
+                        <p id="faq-ans-3" class="hidden mt-3 text-sm text-brand-textMuted leading-relaxed">
+                            Kesalahan penulisan ID sepenuhnya adalah tanggung jawab pembeli jika proses transaksi telah terlanjur dikirim. Namun jika transaksi masih tertunda, Anda bisa segera menghubungi Customer Service kami via WhatsApp untuk meminta perubahan data secepatnya.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-darker border-t border-white/10 pt-16 pb-8 text-sm text-brand-textMuted">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Branding -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center gap-3 group">
+                        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-accent to-brand-secondary flex items-center justify-center shadow-lg">
+                            <i data-lucide="gamepad-2" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <div>
+                            <span class="text-lg font-extrabold tracking-wider bg-gradient-to-r from-white via-slate-200 to-brand-accent bg-clip-text text-transparent">BOPENG</span>
+                            <span class="text-[10px] block text-brand-secondary font-bold tracking-widest -mt-1">GAME STORE</span>
+                        </div>
+                    </a>
+                    <p class="text-xs leading-relaxed text-brand-textMuted">
+                        Bopeng Game Store adalah salah satu portal top up game legal, termurah, tercepat, dan paling tepercaya di Indonesia dengan layanan otomatis 24 jam non-stop.
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Layanan Populer</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#" onclick="selectGame('ml')" class="hover:text-brand-accent transition-colors">Top Up Diamond Mobile Legends</a></li>
+                        <li><a href="#" onclick="selectGame('pubg')" class="hover:text-brand-accent transition-colors">Top Up UC PUBG Mobile</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Promo Spesial Mingguan</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Cek Status Pesanan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Metode Pembayaran</h4>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="bg-white/5 p-1 rounded flex items-center justify-center h-8"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_QRIS.svg" alt="QRIS" class="max-h-full"></div>
+                        <div class="bg-white/5 p-1 rounded flex items-center justify-center h-8"><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA" class="max-h-full"></div>
+                        <div class="bg-white/5 p-1 rounded flex items-center justify-center h-8"><img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gojek_logo_2019.svg" alt="Gopay" class="max-h-full"></div>
+                        <div class="bg-white/5 p-1 rounded flex items-center justify-center h-8"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA" class="max-h-full"></div>
+                        <div class="bg-white/5 p-1 rounded flex items-center justify-center h-8"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg" alt="Mandiri" class="max-h-full"></div>
+                        <div class="bg-white/5 p-1 rounded flex items-center justify-center h-8 text-[9px] text-center font-bold text-white">Lainnya</div>
+                    </div>
+                </div>
+
+                <!-- Contact & Socials -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Hubungi Kami</h4>
+                    <p class="text-xs mb-3">Ada kendala transaksi? Hubungi layanan dukungan kami yang siap membantu.</p>
+                    <div class="space-y-2">
+                        <a href="https://wa.me/628123456789" target="_blank" class="flex items-center gap-2 text-xs text-brand-accent hover:underline">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            <span>+62 812-3456-789 (WhatsApp)</span>
+                        </a>
+                        <p class="flex items-center gap-2 text-xs">
+                            <i data-lucide="mail" class="w-4 h-4 text-brand-secondary"></i>
+                            <span>support@bopengstore.com</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Line -->
+            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                <p>&copy; 2026 Bopeng Game Store. All Rights Reserved. Seluruh hak cipta dimiliki oleh masing-masing pemilik game.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-brand-accent transition-colors">Syarat & Ketentuan</a>
+                    <a href="#" class="hover:text-brand-accent transition-colors">Kebijakan Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHECKOUT SIMULATOR / INVOICE MODAL -->
+    <div id="checkout-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-brand-darker/90 backdrop-blur-sm" onclick="closeCheckoutModal()"></div>
+        
+        <!-- Modal Content Container -->
+        <div class="relative bg-brand-card border border-white/10 rounded-3xl w-full max-w-lg p-6 md:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
+            
+            <!-- Close Button -->
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-brand-textMuted hover:text-white p-2">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Status Header -->
+            <div class="text-center space-y-2 pb-6 border-b border-white/5">
+                <div class="w-16 h-16 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center mx-auto mb-2 animate-bounce">
+                    <i data-lucide="clock" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-white">Menunggu Pembayaran</h3>
+                <p class="text-xs text-brand-textMuted">Silakan selesaikan pembayaran sesuai rincian di bawah ini</p>
+                <div class="inline-flex items-center bg-white/5 px-3 py-1 rounded-full text-xs font-semibold text-white">
+                    Faktur ID: <span id="modal-invoice-id" class="text-brand-secondary font-bold ml-1">#BPP-1294819</span>
+                </div>
+            </div>
+
+            <!-- Invoice Details -->
+            <div class="py-6 space-y-4 text-sm">
+                
+                <!-- Payment Instructions -->
+                <div class="bg-brand-accent/10 border border-brand-accent/20 rounded-2xl p-4 text-center space-y-2">
+                    <span class="block text-xs text-brand-textMuted">Metode: <strong id="modal-payment-name" class="text-white">QRIS</strong></span>
+                    <div id="qr-container" class="hidden flex flex-col items-center justify-center py-2">
+                        <!-- Dummy QR Code -->
+                        <div class="bg-white p-3 rounded-xl inline-block shadow-lg">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=BopengGameStoreDummyPaymentInvoice" alt="Payment QR" class="w-40 h-40">
+                        </div>
+                        <p class="text-[10px] text-brand-textMuted mt-2">Scan kode QR di atas menggunakan aplikasi e-wallet Anda</p>
+                    </div>
+
+                    <div id="bank-container" class="hidden py-2 space-y-2 text-center">
+                        <span class="block text-xs text-brand-textMuted">Kirim ke Rekening / Virtual Account:</span>
+                        <div class="bg-brand-dark/60 border border-white/5 py-3 rounded-xl flex items-center justify-center gap-3">
+                            <span class="font-mono text-lg font-bold text-white tracking-widest" id="modal-account-no">8291028318231</span>
+                            <button onclick="copyToClipboard('modal-account-no')" class="text-brand-accent hover:text-brand-accent/80 text-xs font-bold flex items-center gap-1 bg-white/5 px-2 py-1 rounded">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i> Salin
+                            </button>
+                        </div>
+                        <p class="text-xs text-brand-textMuted">Atas Nama: <strong class="text-white">PT BOPENG GALAXY STORE</strong></p>
+                    </div>
+                </div>
+
+                <!-- Summary Info Card -->
+                <div class="bg-brand-dark/40 border border-white/5 rounded-2xl p-4 space-y-3">
+                    <div class="flex justify-between">
+                        <span class="text-brand-textMuted text-xs">Game</span>
+                        <span class="font-bold text-white" id="modal-game">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-brand-textMuted text-xs">Tujuan</span>
+                        <span class="font-bold text-white" id="modal-target">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-brand-textMuted text-xs">Nominal</span>
+                        <span class="font-bold text-brand-accent" id="modal-item">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-brand-textMuted text-xs">No WhatsApp</span>
+                        <span class="font-bold text-white" id="modal-phone">-</span>
+                    </div>
+                </div>
+
+                <!-- Total Amount Highlight -->
+                <div class="flex justify-between items-center bg-brand-secondary/5 border border-brand-secondary/20 p-4 rounded-2xl">
+                    <div>
+                        <span class="text-xs text-brand-textMuted block">Jumlah Pembayaran</span>
+                        <span class="text-xs text-amber-400">*Gunakan nominal pas agar otomatis terverifikasi</span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xl md:text-2xl font-extrabold text-brand-secondary" id="modal-total">Rp 0</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Action inside Modal -->
+            <div class="space-y-3 pt-4 border-t border-white/5">
+                <button onclick="simulateSuccessPayment()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-2xl flex items-center justify-center gap-2 transition-all">
+                    <i data-lucide="check-circle" class="w-5 h-5"></i>
+                    <span>Simulasikan Pembayaran Berhasil</span>
+                </button>
+                <div class="text-center">
+                    <span class="text-[10px] text-brand-textMuted">Sistem pembayaran Bopeng didukung enkripsi tinggi. CS WhatsApp aktif membantu 24 jam.</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Notification Toast (For copy confirmation or warnings) -->
+    <div id="toast" class="hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-brand-card border border-white/10 px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-300">
+        <div class="w-6 h-6 rounded-full bg-brand-accent/20 flex items-center justify-center" id="toast-icon-bg">
+            <i data-lucide="info" class="w-4 h-4 text-brand-accent" id="toast-icon"></i>
+        </div>
+        <span class="text-sm font-semibold text-white" id="toast-msg">Notifikasi</span>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Game lists data structure
+        const ML_NOMINALS = [
+            { id: 'ml-3', amount: '3 Diamonds', bonus: '0 Bonus', price: 1500 },
+            { id: 'ml-12', amount: '12 Diamonds', bonus: '1 Bonus', price: 3500 },
+            { id: 'ml-28', amount: '28 Diamonds', bonus: '2 Bonus', price: 8400 },
+            { id: 'ml-59', amount: '59 Diamonds', bonus: '5 Bonus', price: 16500, popular: true },
+            { id: 'ml-86', amount: '86 Diamonds', bonus: '8 Bonus', price: 23200 },
+            { id: 'ml-172', amount: '172 Diamonds', bonus: '15 Bonus', price: 46100, popular: true },
+            { id: 'ml-257', amount: '257 Diamonds', bonus: '26 Bonus', price: 68500 },
+            { id: 'ml-344', amount: '344 Diamonds', bonus: '36 Bonus', price: 92800 },
+            { id: 'ml-706', amount: '706 Diamonds', bonus: '80 Bonus', price: 184500, popular: true },
+            { id: 'ml-1050', amount: '1050 Diamonds', bonus: '120 Bonus', price: 275000 },
+            { id: 'ml-1412', amount: '1412 Diamonds', bonus: '160 Bonus', price: 367000 },
+            { id: 'ml-2195', amount: '2195 Diamonds', bonus: '265 Bonus', price: 550000 }
+        ];
+
+        const PUBG_NOMINALS = [
+            { id: 'pubg-35', amount: '35 UC', bonus: '0 Bonus', price: 7500 },
+            { id: 'pubg-50', amount: '50 UC', bonus: '3 Bonus', price: 11000 },
+            { id: 'pubg-70', amount: '70 UC', bonus: '5 Bonus', price: 14500 },
+            { id: 'pubg-125', amount: '125 UC', bonus: '10 Bonus', price: 27000, popular: true },
+            { id: 'pubg-250', amount: '250 UC', bonus: '25 Bonus', price: 54000 },
+            { id: 'pubg-325', amount: '325 UC', bonus: '30 Bonus', price: 69000, popular: true },
+            { id: 'pubg-500', amount: '500 UC', bonus: '50 Bonus', price: 108000 },
+            { id: 'pubg-660', amount: '660 UC', bonus: '60 Bonus', price: 137500, popular: true },
+            { id: 'pubg-1800', amount: '1800 UC', bonus: '220 Bonus', price: 375000 },
+            { id: 'pubg-3850', amount: '3850 UC', bonus: '450 Bonus', price: 749000 }
+        ];
+
+        // Global Selection States
+        let currentGame = 'ml'; // Default ML
+        let selectedNominal = null;
+        let selectedPayment = null;
+
+        // Initialize Lucide Icons
+        window.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            populateMLNominals();
+            populatePUBGNominals();
+            updateLiveSummary();
+        });
+
+        // Toggle FAQ Accordions
+        function toggleFaq(index) {
+            const ans = document.getElementById(`faq-ans-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Switch Game logic
+        function selectGame(game) {
+            currentGame = game;
+            selectedNominal = null;
+            
+            // UI elements update
+            const btnML = document.getElementById('btn-select-ml');
+            const btnPUBG = document.getElementById('btn-select-pubg');
+            const mlFields = document.getElementById('ml-fields');
+            const pubgFields = document.getElementById('pubg-fields');
+            const mlNoms = document.getElementById('ml-nominals');
+            const pubgNoms = document.getElementById('pubg-nominals');
+
+            const s1Indicator = document.getElementById('step-1-indicator');
+            const s2Indicator = document.getElementById('step-2-indicator');
+            const s3Indicator = document.getElementById('step-3-indicator');
+            const s4Indicator = document.getElementById('step-4-indicator');
+
+            if (game === 'ml') {
+                // Button active classes MLBB
+                btnML.className = "relative flex items-center gap-4 px-6 py-4 md:px-8 md:py-5 rounded-2xl border-2 transition-all overflow-hidden duration-300 w-full max-w-xs justify-center group bg-brand-card border-brand-accent shadow-lg shadow-brand-accent/10";
+                btnPUBG.className = "relative flex items-center gap-4 px-6 py-4 md:px-8 md:py-5 rounded-2xl border-2 transition-all overflow-hidden duration-300 w-full max-w-xs justify-center group bg-brand-card border-white/5 hover:border-brand-secondary/50";
+                
+                // Fields switch
+                mlFields.classList.remove('hidden');
+                pubgFields.classList.add('hidden');
+
+                // Nominals list switch
+                mlNoms.classList.remove('hidden');
+                pubgNoms.classList.add('hidden');
+
+                // Step Accent Theme Colors
+                s1Indicator.style.backgroundColor = '#8B5CF6'; // violet
+                s2Indicator.style.backgroundColor = '#8B5CF6';
+                s3Indicator.style.backgroundColor = '#8B5CF6';
+                s4Indicator.style.backgroundColor = '#8B5CF6';
+
+            } else {
+                // Button active classes PUBG
+                btnML.className = "relative flex items-center gap-4 px-6 py-4 md:px-8 md:py-5 rounded-2xl border-2 transition-all overflow-hidden duration-300 w-full max-w-xs justify-center group bg-brand-card border-white/5 hover:border-brand-accent/50";
+                btnPUBG.className = "relative flex items-center gap-4 px-6 py-4 md:px-8 md:py-5 rounded-2xl border-2 transition-all overflow-hidden duration-300 w-full max-w-xs justify-center group bg-brand-card border-brand-secondary shadow-lg shadow-brand-secondary/10";
+                
+                // Fields switch
+                mlFields.classList.add('hidden');
+                pubgFields.classList.remove('hidden');
+
+                // Nominals list switch
+                mlNoms.classList.add('hidden');
+                pubgNoms.classList.remove('hidden');
+
+                // Step Accent Theme Colors to Cyan
+                s1Indicator.style.backgroundColor = '#06B6D4'; // cyan
+                s2Indicator.style.backgroundColor = '#06B6D4';
+                s3Indicator.style.backgroundColor = '#06B6D4';
+                s4Indicator.style.backgroundColor = '#06B6D4';
+            }
+
+            // Deselect card elements inside lists on switch
+            resetNominalSelection();
+            updateLiveSummary();
+        }
+
+        // Format Currency Helper
+        function formatRupiah(number) {
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number);
+        }
+
+        // Populate Mobile Legends Diamonds Nominals
+        function populateMLNominals() {
+            const container = document.getElementById('ml-nominals');
+            container.innerHTML = '';
+            
+            ML_NOMINALS.forEach(item => {
+                const isPopular = item.popular;
+                const card = document.createElement('div');
+                card.id = `card-${item.id}`;
+                card.className = "nominal-card border border-white/5 hover:border-brand-accent/50 bg-brand-dark/50 p-4 rounded-2xl cursor-pointer transition-all relative overflow-hidden group";
+                card.onclick = () => selectNominalItem(item, 'ml');
+
+                card.innerHTML = `
+                    ${isPopular ? '<div class="absolute top-0 right-0 bg-brand-accent text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-xl tracking-wider">POPULER</div>' : ''}
+                    <div class="flex items-center gap-1.5 text-brand-textMuted group-hover:text-white transition-colors">
+                        <i data-lucide="gem" class="w-4 h-4 text-brand-accent"></i>
+                        <span class="text-xs font-semibold uppercase tracking-wider">Diamonds</span>
+                    </div>
+                    <span class="block text-base font-extrabold text-white mt-1 group-hover:text-brand-accent transition-colors">${item.amount}</span>
+                    <span class="block text-[10px] text-brand-textMuted -mt-0.5">${item.bonus}</span>
+                    <span class="block text-sm font-extrabold text-brand-secondary mt-3">${formatRupiah(item.price)}</span>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Populate PUBG UC Nominals
+        function populatePUBGNominals() {
+            const container = document.getElementById('pubg-nominals');
+            container.innerHTML = '';
+
+            PUBG_NOMINALS.forEach(item => {
+                const isPopular = item.popular;
+                const card = document.createElement('div');
+                card.id = `card-${item.id}`;
+                card.className = "nominal-card border border-white/5 hover:border-brand-secondary/50 bg-brand-dark/50 p-4 rounded-2xl cursor-pointer transition-all relative overflow-hidden group";
+                card.onclick = () => selectNominalItem(item, 'pubg');
+
+                card.innerHTML = `
+                    ${isPopular ? '<div class="absolute top-0 right-0 bg-brand-secondary text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-xl tracking-wider">BEST SELLER</div>' : ''}
+                    <div class="flex items-center gap-1.5 text-brand-textMuted group-hover:text-white transition-colors">
+                        <i data-lucide="crosshair" class="w-4 h-4 text-brand-secondary"></i>
+                        <span class="text-xs font-semibold uppercase tracking-wider">PUBG Mobile</span>
+                    </div>
+                    <span class="block text-base font-extrabold text-white mt-1 group-hover:text-brand-secondary transition-colors">${item.amount}</span>
+                    <span class="block text-[10px] text-brand-textMuted -mt-0.5">${item.bonus}</span>
+                    <span class="block text-sm font-extrabold text-brand-accent mt-3">${formatRupiah(item.price)}</span>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Handle Nominal Item Selection click event
+        function selectNominalItem(item, game) {
+            selectedNominal = item;
+
+            // Highlight border state
+            const allNominalCards = document.querySelectorAll('.nominal-card');
+            allNominalCards.forEach(c => {
+                c.classList.remove('border-brand-accent', 'border-brand-secondary', 'bg-brand-accent/5', 'bg-brand-secondary/5');
+            });
+
+            const selectedCard = document.getElementById(`card-${item.id}`);
+            if (selectedCard) {
+                if (game === 'ml') {
+                    selectedCard.classList.add('border-brand-accent', 'bg-brand-accent/5');
+                } else {
+                    selectedCard.classList.add('border-brand-secondary', 'bg-brand-secondary/5');
+                }
+            }
+
+            // Update live checkout display widget with chosen nominal prices
+            updateLiveSummary();
+            updatePaymentPricing(item.price);
+        }
+
+        // Update payment gateway pricing column dynamically based on selected diamonds
+        function updatePaymentPricing(basePrice) {
+            const paymentPrices = document.querySelectorAll('.payment-price');
+            paymentPrices.forEach(p => {
+                p.textContent = formatRupiah(basePrice);
+            });
+        }
+
+        // Reset nominal cards CSS outline
+        function resetNominalSelection() {
+            selectedNominal = null;
+            const allNominalCards = document.querySelectorAll('.nominal-card');
+            allNominalCards.forEach(c => {
+                c.classList.remove('border-brand-accent', 'border-brand-secondary', 'bg-brand-accent/5', 'bg-brand-secondary/5');
+            });
+            const paymentPrices = document.querySelectorAll('.payment-price');
+            paymentPrices.forEach(p => {
+                p.textContent = '-';
+            });
+        }
+
+        // Select Payment Gateway Method
+        function selectPayment(id, name, logo) {
+            // Uncheck other elements
+            const paymentCards = document.querySelectorAll('.payment-card');
+            paymentCards.forEach(c => {
+                c.classList.remove('border-brand-accent', 'border-brand-secondary', 'bg-brand-accent/5', 'bg-brand-secondary/5');
+            });
+
+            selectedPayment = { id, name, logo };
+
+            // Find current clicked card
+            const currentEvent = window.event;
+            let targetCard = currentEvent.currentTarget;
+            if (currentGame === 'ml') {
+                targetCard.classList.add('border-brand-accent', 'bg-brand-accent/5');
+            } else {
+                targetCard.classList.add('border-brand-secondary', 'bg-brand-secondary/5');
+            }
+
+            updateLiveSummary();
+        }
+
+        // Dynamically listen input field keys for live checkout sidebar update
+        document.getElementById('ml-userid').addEventListener('input', updateLiveSummary);
+        document.getElementById('ml-zoneid').addEventListener('input', updateLiveSummary);
+        document.getElementById('pubg-userid').addEventListener('input', updateLiveSummary);
+
+        // Render Summary Live data
+        function updateLiveSummary() {
+            const summaryGame = document.getElementById('summary-game');
+            const summaryId = document.getElementById('summary-id');
+            const summaryItem = document.getElementById('summary-item');
+            const summaryPayment = document.getElementById('summary-payment');
+            const summaryTotal = document.getElementById('summary-total');
+
+            // 1. Game Title
+            summaryGame.textContent = currentGame === 'ml' ? 'Mobile Legends' : 'PUBG Mobile';
+
+            // 2. ID Live
+            if (currentGame === 'ml') {
+                const mlUid = document.getElementById('ml-userid').value;
+                const mlZone = document.getElementById('ml-zoneid').value;
+                if (mlUid) {
+                    summaryId.textContent = `${mlUid} ${mlZone ? '(' + mlZone + ')' : ''}`;
+                } else {
+                    summaryId.textContent = '-';
+                }
+            } else {
+                const pubgUid = document.getElementById('pubg-userid').value;
+                summaryId.textContent = pubgUid ? pubgUid : '-';
+            }
+
+            // 3. Nominal Item Selected
+            if (selectedNominal) {
+                summaryItem.textContent = `${selectedNominal.amount} (${selectedNominal.bonus})`;
+                summaryTotal.textContent = formatRupiah(selectedNominal.price);
+            } else {
+                summaryItem.textContent = '-';
+                summaryTotal.textContent = 'Rp 0';
+            }
+
+            // 4. Payment Selected Name
+            if (selectedPayment) {
+                summaryPayment.textContent = selectedPayment.name;
+            } else {
+                summaryPayment.textContent = '-';
+            }
+        }
+
+        // Custom Toast Notification System (Saves using alerts)
+        function showToast(message, type = 'accent') {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            const toastIconBg = document.getElementById('toast-icon-bg');
+            const toastIcon = document.getElementById('toast-icon');
+
+            toastMsg.textContent = message;
+
+            if (type === 'danger') {
+                toastIconBg.className = "w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center";
+                toastIcon.setAttribute('data-lucide', 'alert-circle');
+                toastIcon.className = "w-4 h-4 text-red-500";
+            } else if (type === 'success') {
+                toastIconBg.className = "w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center";
+                toastIcon.setAttribute('data-lucide', 'check');
+                toastIcon.className = "w-4 h-4 text-emerald-400";
+            } else {
+                toastIconBg.className = "w-6 h-6 rounded-full bg-brand-accent/20 flex items-center justify-center";
+                toastIcon.setAttribute('data-lucide', 'info');
+                toastIcon.className = "w-4 h-4 text-brand-accent";
+            }
+
+            lucide.createIcons();
+
+            // Slide up & show transition
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 3500);
+        }
+
+        // Clipboard handler
+        function copyToClipboard(elementId) {
+            const textElement = document.getElementById(elementId);
+            if (!textElement) return;
+
+            // Using recommended secure fallback clipboard copying method
+            const text = textElement.textContent || textElement.innerText;
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            showToast("Nomor virtual account berhasil disalin ke clipboard!", "success");
+        }
+
+        // Form Validation prior to Invoice pop-up
+        function handleCheckout() {
+            let targetId = '';
+            
+            // Validate step 1
+            if (currentGame === 'ml') {
+                const mlUid = document.getElementById('ml-userid').value;
+                const mlZone = document.getElementById('ml-zoneid').value;
+                if (!mlUid || !mlZone) {
+                    showToast("Harap isi lengkap User ID & Zone ID Mobile Legends Anda!", "danger");
+                    return;
+                }
+                targetId = `${mlUid} (${mlZone})`;
+            } else {
+                const pubgUid = document.getElementById('pubg-userid').value;
+                if (!pubgUid) {
+                    showToast("Harap isi Karakter ID PUBG Mobile Anda!", "danger");
+                    return;
+                }
+                targetId = pubgUid;
+            }
+
+            // Validate step 2
+            if (!selectedNominal) {
+                showToast("Silakan pilih salah satu Nominal top-up terlebih dahulu!", "danger");
+                return;
+            }
+
+            // Validate step 3
+            if (!selectedPayment) {
+                showToast("Harap tentukan metode pembayaran yang ingin digunakan!", "danger");
+                return;
+            }
+
+            // Validate step 4
+            const phone = document.getElementById('user-phone').value;
+            if (!phone || phone.length < 9) {
+                showToast("Harap masukkan nomor WhatsApp aktif dengan benar!", "danger");
+                return;
+            }
+
+            // Everything is valid -> Populate Invoice popup
+            document.getElementById('modal-invoice-id').textContent = '#BPP-' + Math.floor(100000 + Math.random() * 900000);
+            document.getElementById('modal-payment-name').textContent = selectedPayment.name;
+            document.getElementById('modal-game').textContent = currentGame === 'ml' ? 'Mobile Legends (MLBB)' : 'PUBG Mobile';
+            document.getElementById('modal-target').textContent = targetId;
+            document.getElementById('modal-item').textContent = `${selectedNominal.amount} (${selectedNominal.bonus})`;
+            document.getElementById('modal-phone').textContent = phone;
+            document.getElementById('modal-total').textContent = formatRupiah(selectedNominal.price);
+
+            // Handle payment detail conditional UI
+            const qrContainer = document.getElementById('qr-container');
+            const bankContainer = document.getElementById('bank-container');
+
+            if (['qris', 'dana', 'gopay', 'shopeepay'].includes(selectedPayment.id)) {
+                qrContainer.classList.remove('hidden');
+                bankContainer.classList.add('hidden');
+            } else {
+                qrContainer.classList.add('hidden');
+                bankContainer.classList.remove('hidden');
+                
+                // Simulate Bank account numbers randomly based on selected gateway
+                const bcaNum = '172-882101-92';
+                const mandiriNum = '132-00-1928318-1';
+                document.getElementById('modal-account-no').textContent = selectedPayment.id === 'bca' ? bcaNum : mandiriNum;
+            }
+
+            // Open Modal
+            document.getElementById('checkout-modal').classList.remove('hidden');
+        }
+
+        // Close Modal
+        function closeCheckoutModal() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+        }
+
+        // Simulate Successful payment flow
+        function simulateSuccessPayment() {
+            closeCheckoutModal();
+            
+            // Build animated success popup
+            const successOverlay = document.createElement('div');
+            successOverlay.className = "fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-darker/95 backdrop-blur-md";
+            successOverlay.innerHTML = `
+                <div class="bg-brand-card border border-white/10 rounded-3xl w-full max-w-md p-8 text-center space-y-6 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl"></div>
+                    
+                    <div class="w-20 h-20 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto animate-bounce">
+                        <i data-lucide="check" class="w-10 h-10"></i>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <h3 class="text-2xl font-extrabold text-white">Pembayaran Sukses!</h3>
+                        <p class="text-sm text-brand-textMuted leading-relaxed">
+                            Sistem kami berhasil menerima pembayaran untuk pembelian <strong class="text-white">${selectedNominal.amount}</strong>. Item akan masuk otomatis ke akun game Anda dalam waktu 3 detik.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-dark/40 border border-white/5 p-4 rounded-2xl text-xs space-y-2 text-left">
+                        <div class="flex justify-between"><span class="text-brand-textMuted">Status:</span> <span class="font-bold text-emerald-400">Success (API Completed)</span></div>
+                        <div class="flex justify-between"><span class="text-brand-textMuted">Waktu Proses:</span> <span class="text-white">Just Now (Instant)</span></div>
+                        <div class="flex justify-between"><span class="text-brand-textMuted">No. WhatsApp:</span> <span class="text-white">${document.getElementById('user-phone').value}</span></div>
+                    </div>
+
+                    <button onclick="closeSuccessScreen(this)" class="w-full bg-brand-accent hover:bg-brand-accent/90 text-white font-bold py-3.5 rounded-2xl transition-all">
+                        Kembali Berbelanja
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(successOverlay);
+            lucide.createIcons();
+        }
+
+        function closeSuccessScreen(buttonElement) {
+            const overlay = buttonElement.closest('.fixed');
+            if (overlay) {
+                overlay.remove();
+            }
+            // Reset form input values
+            document.getElementById('ml-userid').value = '';
+            document.getElementById('ml-zoneid').value = '';
+            document.getElementById('pubg-userid').value = '';
+            document.getElementById('user-phone').value = '';
+            resetNominalSelection();
+            updateLiveSummary();
+        }
+    </script>
+</body>
+</html>
+
+```
